@@ -6,7 +6,7 @@ export interface formPropsTypes {
     pass?: string;
     age?: number;
     mail?: string;
-    pais?: string;
+    country?: string;
 }
 
 type ModalFormDataPropsTypes = {
@@ -35,10 +35,12 @@ const ModalAnt = ({dataUserForm}:ModalFormDataPropsTypes) => {
       <Button type="primary" onClick={showModal}>
         check your data
       </Button>
-      <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+      <Modal title="Form data:" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+        <p>The user name will be {dataUserForm.name}</p>
+        <p>The password will be {dataUserForm.pass}</p>
+        <p>The age old will be {dataUserForm.age}</p>
+        <p>The email will be {dataUserForm.mail}</p>
+        <p>The country were you live is {dataUserForm.country}</p>
       </Modal>
     </>
   );

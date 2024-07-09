@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Modal } from 'antd';
 
 const ModalProducts: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-   // const [dataProducts, setDataProducts] = useState([])
+   const [dataProducts, setDataProducts] = useState([])
 
-  // useEffect(() => {
-  //   apiCall()
-  // }, [])
+  useEffect(() => {
+    apiCall()
+  }, [])
   
-  // const apiCall = async ()=>{
-  //   const call = await fetch(`https://fakestoreapi.com/products`)
-  //   const data = await call.json();
-  //   console.log(data)
-  // }
+  const apiCall = async ()=>{
+    const call = await fetch(`https://fakestoreapi.com/products`)
+    const data = await call.json();
+    console.log(data)
+    setDataProducts(data)
+    console.log(dataProducts)
+  }
+
 
   const showModal = () => {
     setIsModalOpen(true);

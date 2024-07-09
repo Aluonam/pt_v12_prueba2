@@ -9,7 +9,7 @@ export interface formPropsTypes {
     pass?: string;
     age?: number;
     mail?: string;
-    pais?: string;
+    country?: string;
 }
 
 const ReviewForm = () => {
@@ -22,7 +22,7 @@ const ReviewForm = () => {
         pass: '',
         age: 0,
         mail: '',
-        pais: '',
+        country: '',
     })
 
     const handleSubmitForm = (data:formPropsTypes)=>{
@@ -55,7 +55,7 @@ const ReviewForm = () => {
         </div>
         <div>
             <label>Country:</label>
-            <select {...register('pais')}>
+            <select {...register('country')}>
             <option value='es'>España</option>
             <option value='pr'>Portugal</option>
             <option value='fr'>Francia</option>
