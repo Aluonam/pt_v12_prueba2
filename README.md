@@ -3,7 +3,7 @@
 
 **TAREA PRINCIPAL**
 
-**1.** Consume una API y muestra los datos en un modal.
+**1.** Consume una API y muestra los datos en un modal. https://fakestoreapi.com/products 
 
 **TAREAS SECUNDARIAS**
 
