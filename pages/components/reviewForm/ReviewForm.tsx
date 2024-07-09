@@ -5,11 +5,11 @@ import ModalAnt from './ModalAnt';
 
 
 export interface formPropsTypes {
-    name: 'string';
-    pass: 'string';
-    age: 'number';
-    mail: 'string';
-    pais: 'boolean';
+    name: string;
+    pass?: string;
+    age?: number;
+    mail?: string;
+    pais?: string;
 }
 
 const ReviewForm = () => {
@@ -17,9 +17,18 @@ const ReviewForm = () => {
 
     const { register, handleSubmit } = useForm<formPropsTypes>();
 
+    const [dataUserForm, setDataUserForm] = useState<formPropsTypes>({
+        name: '',
+        pass: '',
+        age: 0,
+        mail: '',
+        pais: '',
+    })
 
     const handleSubmitForm = (data:formPropsTypes)=>{
         console.log('datos del usuario:',data)
+        setDataUserForm(data)
+        console.log('datos de USUARIO',dataUserForm)
        
     }
 
@@ -30,7 +39,7 @@ const ReviewForm = () => {
     <form onSubmit={handleSubmit(handleSubmitForm)}>
         <div>
             <label>Name:</label>
-            <input type='text' {...register('name')}></input>
+            <input type='text' required {...register('name')}></input>
         </div>
         <div>
             <label>Password:</label>
@@ -53,7 +62,7 @@ const ReviewForm = () => {
           </select>
         </div>
         <button type='submit'>
-            <ModalAnt ></ModalAnt>
+            <ModalAnt dataUserForm={dataUserForm}></ModalAnt>
         </button>
         
     </form>   

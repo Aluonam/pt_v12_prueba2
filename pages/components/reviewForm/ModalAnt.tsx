@@ -1,8 +1,22 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
 
-const ModalAnt: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export interface formPropsTypes {
+    name: string;
+    pass?: string;
+    age?: number;
+    mail?: string;
+    pais?: string;
+}
+
+type ModalFormDataPropsTypes = {
+    dataUserForm: formPropsTypes 
+  }
+
+  
+const ModalAnt = ({dataUserForm}:ModalFormDataPropsTypes) => {
+// const ModalAnt = ({dataUserForm}:{dataUserForm:formPropsTypes}) => { //otra forma de hacerlo
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
   const showModal = () => {
     setIsModalOpen(true);
