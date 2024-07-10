@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import React, { useEffect, useState } from 'react';
 import ModalProducts from "./components/apiModal/ModalProducts";
 import ReviewForm from "./components/reviewForm/ReviewForm";
+import InputCounteLetters from "./components/inputCounterLetters/InputCounteLetters";
+import FormPasswordModal from "./components/formPasswordModal/FormPasswordModal";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +24,8 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <ModalProducts></ModalProducts>
         <ReviewForm></ReviewForm>
+        {/* <InputCounteLetters></InputCounteLetters> */}
+        <FormPasswordModal></FormPasswordModal>
       </main>
     </>
   );
