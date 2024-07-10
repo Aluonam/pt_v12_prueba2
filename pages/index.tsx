@@ -5,6 +5,7 @@ import ModalProducts from "./components/apiModal/ModalProducts";
 import ReviewForm from "./components/reviewForm/ReviewForm";
 import InputCounteLetters from "./components/inputCounterLetters/InputCounteLetters";
 import FormPasswordModal from "./components/formPasswordModal/FormPasswordModal";
+import ActualHour from "./components/actualHour/ActualHour";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default function Home() {
         <ReviewForm></ReviewForm>
         {/* <InputCounteLetters></InputCounteLetters> */}
         <FormPasswordModal></FormPasswordModal>
+        <ActualHour></ActualHour>
       </main>
     </>
   );
