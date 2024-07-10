@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
 
-const ModalAntPassword: React.FC = () => {
+const ModalAntPassword = ({userPassword}:{userPassword :string}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -22,7 +22,7 @@ const ModalAntPassword: React.FC = () => {
         Show your password
       </Button>
       <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-        <p>Some contents...</p>
+        <p>The password entered is: {userPassword}</p>
       </Modal>
     </>
   );
