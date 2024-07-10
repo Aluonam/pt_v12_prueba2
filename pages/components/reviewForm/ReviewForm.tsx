@@ -32,6 +32,8 @@ const ReviewForm = () => {
        
     }
 
+
+
   return (
     <>
     <div>
@@ -61,10 +63,7 @@ const ReviewForm = () => {
             <option value='fr'>Francia</option>
           </select>
         </div>
-        <button type='submit'>
-            <ModalAnt dataUserForm={dataUserForm}></ModalAnt>
-        </button>
-        
+         <ModalAnt dataUserForm={dataUserForm} handleSubmitModal={handleSubmit(handleSubmitForm)}></ModalAnt>
     </form>   
     </div>
    

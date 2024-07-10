@@ -23,9 +23,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
+        Hola mundo
         <ModalProducts></ModalProducts>
-        <ReviewForm></ReviewForm>
-        {/* <InputCounteLetters></InputCounteLetters> */}
+         <ReviewForm></ReviewForm> 
+        <InputCounteLetters></InputCounteLetters>
         <FormPasswordModal></FormPasswordModal>
         <ActualHour></ActualHour>
       </main>

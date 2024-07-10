@@ -11,15 +11,17 @@ export interface formPropsTypes {
 
 type ModalFormDataPropsTypes = {
     dataUserForm: formPropsTypes 
+    handleSubmitModal: () => void
   }
 
   
-const ModalAnt = ({dataUserForm}:ModalFormDataPropsTypes) => {
+const ModalAnt = ({dataUserForm, handleSubmitModal}:ModalFormDataPropsTypes) => {
 // const ModalAnt = ({dataUserForm}:{dataUserForm:formPropsTypes}) => { //otra forma de hacerlo
   const [isModalOpen, setIsModalOpen] = useState(false); 
 
   const showModal = () => {
     setIsModalOpen(true);
+    handleSubmitModal();
   };
 
   const handleOk = () => {
@@ -32,7 +34,11 @@ const ModalAnt = ({dataUserForm}:ModalFormDataPropsTypes) => {
 
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+    {/* <button type='submit' onClick={showModal}>
+      enviar formulario y abrir modal
+        </button> */}
+    
+      <Button type="primary" onClick={showModal} >
         check your data
       </Button>
       <Modal title="Form data:" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
